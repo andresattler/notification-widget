@@ -16,7 +16,7 @@ class Notification extends React.Component {
      const notification = this.props.notification
      return (
       <div className={
-        [notification ? style.modal : style.container,
+        [notification.modal ? style.modal : style.container,
          style[notification.position],
          style[notification.type]
          ].join(' ')
