@@ -1,13 +1,16 @@
 .container, .modal
   position fixed 
-  top 0
   padding 15px
   min-width 150px
   box-shadow 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
-.tl
+.tl, .tr
+  top 0
+.tl, .bl
   left 0
-.tr
+.tr, .br
   right 0
+.bl, .br
+  bottom 0
 .message
  color #7494a3
  text-align center
@@ -19,6 +22,8 @@
   background-color #F44336
 .modal
   position fixed
+  top 10vh
+  bottom 10vw
   left 10vw
   right 10vw
   width 80vw

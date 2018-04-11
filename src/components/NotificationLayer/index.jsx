@@ -2,8 +2,6 @@ import React from 'react'
 
 import Notification from './Notification/'
 
-import style from './style.styl'
-
 class NotificationLayer extends React.Component {
   constructor(props) {
     super(props)

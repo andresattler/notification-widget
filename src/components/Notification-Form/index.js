@@ -1,7 +1,5 @@
 import React from 'react'
 
-import style from './style.styl'
-
 class NotificationForm extends React.Component {
   constructor(props) {
     super(props)
@@ -16,20 +14,20 @@ class NotificationForm extends React.Component {
   }
   render() {
     return (
-      <div className={style.container}>
+      <div>
         <p> Message:  
           <input onChange={(e) => this.setState({string: e.target.value})}/>
         </p>
-        <p> {this.state.position}
-          <input 
-            id='position'
-            type='checkbox'
-            className={style.positionSwitch}
-            onClick={() => 
-              this.setState({position: this.state.position === 'tl' ? 'tr' :'tl'})}
+        <p> Position:
+          <select 
+          onChange={(e) =>
+           this.setState({position: e.target.value})}
           >
-          </input>
-          <label htmlFor='position'/>
+            <option value='tl'>Top Left</option>
+            <option value='tr'>Top Right</option>
+            <option value='bl'>Botom Left</option>
+            <option value='br'>Botom Right</option>
+          </select>
         </p>
         <p>Time to display message:
           <input onChange={(e) => this.setState({time: e.target.value})}/>
