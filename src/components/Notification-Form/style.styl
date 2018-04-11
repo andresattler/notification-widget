@@ -1,0 +1,32 @@
+.position-switch
+    display none
+    &:checked ~ label
+      background #6FBEB5
+      &:after
+        left 20px
+        background #179588
+  label
+    position relative
+    display block
+    margin-top 5px
+    width 44px
+    height 20px
+    background #898989
+    border-radius 100px
+    cursor pointer
+    transition all .3s ease
+    &:after
+      position absolute
+      left -2px
+      top -3px
+      display block
+      width 26px
+      height 26px
+      border-radius 100px
+      background-color white
+      box-shadow 0px 3px 3px rgba(#000,.05)
+      content ""
+      transition all .3s ease
+    &:active
+      &:after
+        transform scale(1.15, .85)
